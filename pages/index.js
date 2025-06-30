@@ -1,12 +1,37 @@
-// pages/index.js (for Pages Router)
+//pages/index.js
 
 import React from 'react';
-import NextjsFirebaseApp from '../components/NextjsFirebaseApp'; // Adjust path as needed
+import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
+import MainContent from '../components/MainContent';
 
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 font-sans antialiased">
-      <NextjsFirebaseApp />
-    </div>
-  );
-}
+const Home = () => {
+    return (
+        <div>
+            <nav>
+                <h1>
+                    Welcome to GFG
+                    E-commerce Dashboard
+                </h1>
+            </nav>
+
+            {/* SIDEBAR */}
+            <Sidebar />
+            {/* SIDEBAR */}
+
+            {/* CONTENT */}
+            <section id="content">
+                {/* NAVBAR */}
+                <Navbar />
+                {/* NAVBAR */}
+
+                {/* MAIN */}
+                <MainContent />
+                {/* MAIN */}
+            </section>
+            {/* CONTENT */}
+        </div>
+    );
+};
+
+export default Home;

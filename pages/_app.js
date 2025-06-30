@@ -1,14 +1,7 @@
-// pages/_app.js (for Pages Router)
+//pages/_app.js
 
-import '../styles/globals.css'; // Your global styles (e.g., Tailwind CSS base styles)
-import { AuthUserProvider } from '../contexts/AuthContext'; // Adjust path as needed
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <AuthUserProvider>
-      <Component {...pageProps} />
-    </AuthUserProvider>
-  );
+export default function App({ Component, pageProps }) {
+    return <Component {...pageProps} />;
 }
-
-export default MyApp;
